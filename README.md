@@ -1,16 +1,31 @@
 # Trees
 
-The Tree data structure stores hierarchies, and takes a shape akin to an upside-down Family tree. Trees all start with a single _root_ Node. Nodes can have _child_ Nodes. Nodes at the bottom, with no children, are known as _leaf_ Nodes.
+<img src='assets/binary-tree.png' align='right' width='200px'>
 
-A `Node` in the context of a Tree is similar to Nodes in a LinkedList, but it has multiple "children" as opposed to the concept of the "next Node in the chain."
+The Tree data structure stores hierarchies, and takes a shape akin to an upside-down "Family Tree." Trees all start with a single _root_ Node. Nodes can have _child_ Nodes. Nodes at the bottom, with no children, are known as _leaf_ Nodes.
 
-Trees can also serve as the underlying data structure of a List. Like Lists, but unlike Maps, Trees _can_ be ordered collections. Ordered trees allow for more efficient search than a List, but are less efficient than a Map at simple lookups.
+Really, Trees are Graphs with more restrictions.
+
+Trees can also serve as the underlying data structure of a List. Like Lists, but unlike Maps, Trees can be _ordered collections_. Ordered trees allow for more efficient search than a List, but are less efficient than a Map at simple lookups.
 
 The [Wikipedia entry](http://en.wikipedia.org/wiki/Tree_%28data_structure%29) on Trees includes more vocabulary along with definitions.
 
 ## Why is this important?
 
-Certain problems are naturally modeled as a Tree. Organization hierarchies, and many kinds of parsed text (code, HTML, JSON).
+Certain problems are naturally modeled as a Tree. Organization hierarchies, and many kinds of parsed text (code, HTML, JSON). For example, the following equation...
+
+```
+1 + (3 * 4)
+```
+
+... can be recognized as a tree of operators and numerals:
+
+```
+|----+---|
+1      --*--
+       |   |
+       3   4
+```
 
 Trees can also be useful when an ordered List is desired, and you need searching to be better than O(n).
 
