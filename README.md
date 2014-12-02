@@ -1,6 +1,6 @@
 # Trees
 
-<img src='assets/binary-tree.png' style='float:right' width='200px'>
+<img src='assets/binary-tree.png' align='right' width='200px'>
 
 The Tree data structure stores hierarchies, and takes a shape akin to an upside-down "Family Tree." Trees all start with a single _root_ Node. Nodes can have _child_ Nodes. Nodes at the bottom, with no children, are known as _leaf_ Nodes.
 
