@@ -1,3 +1,3 @@
-def Tree
+class Tree
 
 end
