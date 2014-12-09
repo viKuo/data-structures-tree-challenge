@@ -72,8 +72,13 @@ Your TreeList class should conform to the following interface:
 
 - `TreeList#new()`: Instantiate a new TreeList
 - `TreeList#add(element)`: Add an element to the list
-- `TreeList#find(element)`: Return the index of `element` in the list
+- `TreeList#remove(element)`: Remove an element to the list
+- `TreeList#index_of(element)`: Return the index of `element` in the list
 - `TreeList#size`: Return the size of the list
 - `TreeList#each {|element|}`: Iterate through the list. The list should be in order.
 
-Most importantly, `#find` should be _faster_ than O(n). Remember that this is an ordered tree — how can you use this to your advantage?
+Most importantly, `#add` and `#remove` should be faster than O(n). Remember that this is an ordered tree — how can you use this to your advantage?
+
+## Stretch
+
+Make `#index_of` O(log n)
