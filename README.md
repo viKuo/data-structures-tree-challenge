@@ -79,4 +79,4 @@ Your TreeList class should conform to the following interface:
 
 ## Stretch
 
-Make `#index_of` O(log n)
+Create a `#contains?(element)` method that is O(log n)
