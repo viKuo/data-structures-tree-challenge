@@ -2,17 +2,13 @@
 
 <img src='assets/binary-tree.png' align='right' width='200px'>
 
-The Tree data structure stores hierarchies, and takes a shape akin to an upside-down "Family Tree." Trees all start with a single _root_ Node. Nodes can have _child_ Nodes. Nodes at the bottom, with no children, are known as _leaf_ Nodes.
-
-Really, Trees are Graphs with more restrictions.
-
-Trees can also serve as the underlying data structure of a List. Like Lists, but unlike Maps, Trees can be _ordered collections_. Ordered trees allow for more efficient search than a List, but are less efficient than a Map at simple lookups.
+The Tree data structure stores hierarchies, and takes a shape akin to a "Family Tree." Trees all start with a single _root_ Node. Nodes can have _child_ Nodes. Nodes at the bottom, with no children, are known as _leaf_ Nodes.
 
 The [Wikipedia entry](http://en.wikipedia.org/wiki/Tree_%28data_structure%29) on Trees includes more vocabulary along with definitions.
 
 ## Why is this important?
 
-Certain problems are naturally modeled as a Tree. Organization hierarchies, and many kinds of parsed text (code, HTML, JSON). For example, the following equation...
+Certain problems are naturally modeled as a Tree. Organization hierarchies, the HTML DOM, JSON, even code can be thought of as trees. For example, the following mathematical expression...
 
 ```
 1 + (3 * 4)
@@ -20,14 +16,9 @@ Certain problems are naturally modeled as a Tree. Organization hierarchies, and 
 
 ... can be recognized as a tree of operators and numerals:
 
-```
-|----+---|
-1      --*--
-       |   |
-       3   4
-```
+![mathematical expression tree](assets/math-tree.png)
 
-Trees can also be useful when an ordered List is desired, and you need searching to be better than O(n).
+Ordered trees can also serve as the underlying data structure of a List. Ordered trees allow for more efficient search than a List.
 
 ## Release 1, Implement a Tree
 
@@ -45,20 +36,14 @@ Implement and test `Tree` and `Node` classes. Rely on any of the Data Structures
 #### Tree
 
 - `Tree::new(node)`: Instantiate a new Tree with `node` as the _root_
-- `Tree#search {|value| }`: Search through the tree. `#search` takes a block that receives the _value_ of the node. It should return the first node for which the block returns `true`, or nil if no node is found.
+- `Tree#search {|value| }`: Search through the tree. `#search` takes a block that receives the _value_ of the node. It should return the first node for which the block returns `true`, or `nil` if no node is found.
 
-Have at least one test that constructs a tree that looks like this and verify that you can search and find `#baz-box`.
+Have at least one test that constructs a tree containing strings that looks like this and verify that you can search and find `"b"`:
 
-```
-       ----------<body id='foo'>----------
-       |                                 |
-<h1 id='bang'>                   <div id='bar-box'>
-                                         |
-                                 <div id='baz-box'>
+![dom tree](assets/dom-tree.png)
 
-```
 
-## Release 2, Implement a Tree List
+## Stretch 1: Implement a Tree List
 
 Implement and test a TreeList data structure. A TreeList is a just a List implementation that uses an _ordered_ Tree behind the scenes. Consider using your Tree as a binary tree in your implementation.
 
@@ -77,6 +62,6 @@ Your TreeList class should conform to the following interface:
 - `TreeList#each {|element|}`: Iterate through the list. The list should be in order.
 `#add` should be faster than O(n). Remember that this is an ordered tree — how can you use this to your advantage? Could `#add` be O(n) in a sorted linked list?
 
-## Stretch
+## Stretch 2: O(1) `contains?``
 
 Create a `#contains?(element)` method that is O(log n)
